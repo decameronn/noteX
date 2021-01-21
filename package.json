@@ -1,0 +1,29 @@
+{
+  "name": "notex",
+  "version": "1.0.0",
+  "description": "A basic note-taking app.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildHtml": "gulp doHtmlTask"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decameronn/noteX.git"
+  },
+  "keywords": [
+    "notex"
+  ],
+  "author": "Decameron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decameronn/noteX/issues"
+  },
+  "homepage": "https://github.com/decameronn/noteX#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "pug": "^3.0.0"
+  }
+}
