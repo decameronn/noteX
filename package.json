@@ -5,7 +5,10 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildHtml": "gulp doHtmlTask"
+    "html": "gulp doHtml",
+    "css": "gulp doCss",
+    "clean": "gulp clean",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,10 @@
   "homepage": "https://github.com/decameronn/noteX#readme",
   "devDependencies": {
     "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-sourcemaps": "^3.0.0",
-    "pug": "^3.0.0"
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
