@@ -1,4 +1,4 @@
-const { src, dest, parallel, series } = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 const pug = require('gulp-pug');
 const sourcemaps = require('gulp-sourcemaps');
 const broswerSync = require('browser-sync').create();
@@ -8,14 +8,16 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
+const babel = require('gulp-babel');
+// const { watch } = require('browser-sync');
 
 const paths = {
   app: {
-    pug: './app/*.pug',
+    pug: './app/pug/index.pug',
     sass: './app/sass/*',
     js: './app/js/main.js',
     img: './app/img/',
-    fonts: './app/fnt/'
+    fnt: './app/fnt/'
   },
   dist: {
     public: './dist/',
@@ -26,23 +28,13 @@ const paths = {
   }
 };
 
-// TODO Test and update as needed
-function doBrowserSync(done) {
-  broswerSync.init({ 
-    server: { baseDir: './dist'}, port:3000 });
-  done();
-}
-function doBrowserSyncReload(done) {
-  broswerSync.reload();
-  done();
-}
 
 function doHtml() {
   return src(paths.app.pug)
     .pipe(plumber())
     .pipe(pug())
     .pipe(dest(paths.dist.public))
-    .pipe(broswerSync.stream());    
+    .pipe(broswerSync.stream());
 }
 
 function doCss() {
@@ -59,24 +51,35 @@ function doCss() {
 function doJs() {
   return src(paths.app.js)
     .pipe(plumber())
+    .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
     .pipe(dest(paths.dist.js))
-    .pipe(broswerSync.stream());    
+    .pipe(broswerSync.stream());
 }
 
-function clean() {
-  return del('dist');
+function cleanProject() {
+  return del(paths.dist.public);
 }
 
-const build = series(clean, parallel(doHtml, doCss, doJs));
+const buildProject = series(cleanProject, parallel(doHtml, doCss, doJs));
 
+function watchProject(done) {
+  broswerSync.init({ 
+    server: { baseDir: './dist' }, port: 3000 });
 
-exports.doBrowserSync = doBrowserSync;
-exports.doBrowserSyncReload = doBrowserSyncReload;
+  watch('./app/pug/**/*.pug', doHtml);
+  watch('./app/sass/**/*sass', doCss);
+  watch('./app/js/**/*js', doJs);
+    
+  broswerSync.reload();
+  done();
+}
 
 exports.doHtml = doHtml;
 exports.doCss = doCss;
-exports.clean = clean;
 exports.doJs = doJs;
+exports.cleanProject = cleanProject;
+exports.buildProject = buildProject;
+exports.watchProject = watchProject;
 
-exports.build = build;
+exports.default = series(buildProject, watchProject);

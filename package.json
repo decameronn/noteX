@@ -4,12 +4,13 @@
   "description": "A basic note-taking app.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "html": "gulp doHtml",
     "css": "gulp doCss",
     "js": "gulp doJs",
-    "clean": "gulp clean",
-    "build": "gulp build"
+    "clean": "gulp cleanProject",
+    "build": "echo \"Cleaning and rebuilding the project...\" && gulp buildProject",
+    "watch": "echo \"Starting local server...\" && gulp watchProject",
+    "default": "echo \"Cleaning and rebooting the project...\" && gulp default"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,12 @@
   },
   "homepage": "https://github.com/decameronn/noteX#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.12.11",
     "autoprefixer": "^10.2.3",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
