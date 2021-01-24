@@ -6,7 +6,6 @@ const del = require('del');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 
@@ -20,7 +19,7 @@ const paths = {
   },
   dist: {
     public: './dist/',
-
+  
     css: './dist/css/',
     js: './dist/js/',
     img: './dist/img/'
@@ -60,7 +59,6 @@ function doCss() {
 function doJs() {
   return src(paths.app.js)
     .pipe(plumber())
-    .pipe(concat(paths.app.js))
     .pipe(uglify())
     .pipe(dest(paths.dist.js))
     .pipe(broswerSync.stream());    
