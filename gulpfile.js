@@ -9,7 +9,6 @@ const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
-// const { watch } = require('browser-sync');
 
 const paths = {
   app: {
@@ -81,5 +80,4 @@ exports.doJs = doJs;
 exports.cleanProject = cleanProject;
 exports.buildProject = buildProject;
 exports.watchProject = watchProject;
-
 exports.default = series(buildProject, watchProject);
