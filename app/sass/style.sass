@@ -1,13 +1,30 @@
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap')
+
 body
-  margin: 0
-  padding: 0
-h1
-  font-family: 'Liberation Serif'
-  font-size: 2rem
-  &:hover
-    color: #c73535
-    transition: .3s
-li
-  list-style: none
-  &:hover
-    text-decoration: underline
+  padding: 1em
+  background: #f3f3f3
+  font-family: 'Raleway', sans-serif
+
+.note-container
+  display: flex
+  flex-flow: row wrap
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5)
+    filter: blur(10px)
+
+.note-list
+  flex-grow: 1
+  justify-content: center
+  flex-wrap: wrap
+  margin: 0 auto
+  
+.note
+  background-color: rgba(215, 200, 215, .7)
+  border-radius: .3vw
+  width: 25vw
