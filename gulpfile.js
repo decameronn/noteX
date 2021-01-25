@@ -20,7 +20,6 @@ const paths = {
   },
   dist: {
     public: './dist/',
-  
     css: './dist/css/',
     js: './dist/js/',
     img: './dist/img/'
