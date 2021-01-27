@@ -2,22 +2,14 @@
 
 body
   padding: 1em
-  background: #f3f3f3
+  background: #303136
   font-family: 'Raleway', sans-serif
 
 .note-container
   display: flex
   flex-flow: row wrap
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5)
-    filter: blur(10px)
 
+// TODO is this needed? 
 .note-list
   flex-grow: 1
   justify-content: center
@@ -28,3 +20,11 @@ body
   background-color: rgba(215, 200, 215, .7)
   border-radius: .3vw
   width: 25vw
+  padding: 1em
+  flex-wrap: wrap
+  resize: both
+  cursor: pointer
+
+.note-header
+  font-size: 2em
+

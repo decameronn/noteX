@@ -1,5 +1,15 @@
-function checkScriptConnection() {
-  console.log('main.js connected');
+console.log('main.js connected');
+
+
+function createNote() {
+  let note = document.getElementsByClassName('note');
+  
 }
 
-checkScriptConnection();
+function editNote() {
+
+}
+
+function deleteNote() {
+
+}
