@@ -9,14 +9,15 @@ const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
 
 const paths = {
   app: {
     pug: './app/pug/index.pug',
     sass: './app/sass/*',
-    js: './app/js/main.js',
-    img: './app/img/',
-    fnt: './app/fnt/'
+    js: './app/js/*',
+    img: './app/img/*',
+    fnt: './app/fnt/*'
   },
   dist: {
     public: './dist/',
@@ -55,11 +56,17 @@ function doJs() {
     .pipe(broswerSync.stream());
 }
 
+function doImg() {
+  return src(paths.app.img)
+    .pipe(imagemin())
+    .pipe(dest(paths.dist.img));
+}
+
 function cleanProject() {
   return del(paths.dist.public);
 }
 
-const buildProject = series(cleanProject, parallel(doHtml, doCss, doJs));
+const buildProject = series(cleanProject, parallel(doHtml, doCss, doJs, doImg));
 
 function watchProject(done) {
   broswerSync.init({ 
@@ -68,15 +75,19 @@ function watchProject(done) {
   watch('./app/pug/**/*.pug', doHtml);
   watch('./app/sass/**/*sass', doCss);
   watch('./app/js/**/*js', doJs);
+  watch('./app/img/**/*', doImg);
     
   broswerSync.reload();
   done();
 }
 
+// debug
 exports.doHtml = doHtml;
 exports.doCss = doCss;
 exports.doJs = doJs;
+exports.doImg = doImg;
 exports.cleanProject = cleanProject;
 exports.buildProject = buildProject;
 exports.watchProject = watchProject;
+
 exports.default = series(buildProject, watchProject);
