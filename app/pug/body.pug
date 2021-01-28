@@ -1,11 +1,13 @@
 body
-  div(class="note-container")
-    
-      div(class="note")
-        div(class="note-header")
-          div(class="note-title")
-            input(class="input-body" type="text" placeholder="Type note title...")
-          div(class="note-info")
-            //- TODO add date & buttons
-        div(class="note-body")
-          input(class="input-body" type="text" placeholder="Type note text...")
+  div(class="container wrapper")
+ 
+    div(class="note")
+      div(class="note-header")
+        div(class="note-title")
+          input(class="input-body" type="text" placeholder="Type note title...")
+          button(class="new-note-btn")
+            i(class="far fa-times-circle")
+        div(class="note-info")
+          //- TODO add date & buttons
+      div(class="note-body")
+        input(class="input-body" type="text" placeholder="Type note text...")
