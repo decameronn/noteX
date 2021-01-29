@@ -10,6 +10,7 @@ const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
+const cachebust = require('gulp-cache-bust');
 
 const paths = {
   app: {
@@ -62,11 +63,17 @@ function doImg() {
     .pipe(dest(paths.dist.img));
 }
 
+function doCacheBust() {
+  return src('./dist/**/*.html')
+    .pipe(cachebust({ type: 'timestamp' }))
+    .pipe(dest('./dist'));
+}
+
 function cleanProject() {
   return del(paths.dist.public);
 }
 
-const buildProject = series(cleanProject, parallel(doHtml, doCss, doJs, doImg));
+const buildProject = series(cleanProject, doCacheBust, parallel(doHtml, doCss, doJs, doImg));
 
 function watchProject(done) {
   broswerSync.init({ 
@@ -86,6 +93,7 @@ exports.doHtml = doHtml;
 exports.doCss = doCss;
 exports.doJs = doJs;
 exports.doImg = doImg;
+exports.doCacheBust = doCacheBust;
 exports.cleanProject = cleanProject;
 exports.buildProject = buildProject;
 exports.watchProject = watchProject;

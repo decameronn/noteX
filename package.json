@@ -8,6 +8,7 @@
     "css": "gulp doCss",
     "js": "gulp doJs",
     "img": "gulp doImg",
+    "cbust": "gulp doCacheBust",
     "clean": "gulp cleanProject",
     "build": "echo \"Cleaning and rebuilding the project...\" && gulp buildProject",
     "watch": "echo \"Starting local server...\" && gulp watchProject",
@@ -33,6 +34,7 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-cache-bust": "^1.4.1",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
@@ -41,5 +43,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "imagemin-gifsicle": "^7.0.0"
   }
 }
