@@ -1,13 +1,20 @@
 body
-  div(class="container wrapper")
- 
-    div(class="note")
-      div(class="note-header")
-        div(class="note-title")
-          input(class="input-body" type="text" placeholder="Type note title...")
-          button(class="new-note-btn")
-            i(class="far fa-times-circle")
-        div(class="note-info")
-          //- TODO add date & buttons
-      div(class="note-body")
-        input(class="input-body" type="text" placeholder="Type note text...")
+  //- div(class="navbar-above-main-container")
+
+  div(class="main-container")
+
+    //- notes header, reserved for New Note element
+    div(class="take-note-container")
+      //- new note element
+      div(class="take-note-group")
+        //- input text (later open new note div)
+        div(id="take-note-input")
+          div(class="input-text")
+            input(type="text", name="text", placeholder="Take New Note...")
+        //- possible clickable icons at the end of the text input
+        div(class="take-note-buttons")
+          <i class="far fa-copy"></i>
+          <i class="far fa-edit"></i>
+          <i class="far fa-times-circle"></i>
+
+    //- notes body, reserved for the List of Notes we create

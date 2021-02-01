@@ -1,23 +1,33 @@
+@font-face
+  font-family: open-sans;
+  src: url('../fnt/open-sans');
+
 * 
   box-sizing: border-box
 
 body
-  padding: 1em
-  background: #303136
-  font-family: 'Raleway', sans-serif
+  background: url('../img/jan-kahanek-g3O5ZtRk2E4-unsplash.jpg') #a6bbf5
+  background-size: cover
+  font-family: 'Open Sans', sans-serif
 
-.note-container
+
+.main-container
+  display: flex
+  height: 100vh
+  border: 1px solid pink
+
+.take-note-container
+  height: 10vh
+  width: 100vw
+  border: 1px solid red
+  padding: 1em
+
+.take-note-group
   display: flex
   flex-flow: row wrap
-
-.note
-  background-color: rgba(215, 200, 215, .7)
-  border-radius: .3vw
-  width: 25vw
-  padding: 1em
+  border: 1px solid green
   resize: both
   cursor: pointer
 
-.note-header
-  font-size: 2em
-
+.take-note-buttons
+  margin-left: 0.4em
