@@ -9,12 +9,14 @@ body
       div(class="take-note-group")
         //- input text (later open new note div)
         div(id="take-note-input")
-          div(class="input-text")
-            input(type="text", name="text", placeholder="Take New Note...")
+          //- div(class="input-text")
+          input(class="input-text" type="text", name="text", placeholder="Take new note...")
         //- possible clickable icons at the end of the text input
         div(class="take-note-buttons")
-          <i class="far fa-copy"></i>
-          <i class="far fa-edit"></i>
-          <i class="far fa-times-circle"></i>
+          i(class="test far fa-copy")
+          i(class="test far fa-edit")
+          i(class="test far fa-times-circle")
 
     //- notes body, reserved for the List of Notes we create
+      each note should be generated with JS
+      on.click event

@@ -6,7 +6,7 @@
   box-sizing: border-box
 
 body
-  background: url('../img/jan-kahanek-g3O5ZtRk2E4-unsplash.jpg') #a6bbf5
+  // background: url('../img/jan-kahanek-g3O5ZtRk2E4-unsplash.jpg') #a6bbf5
   background-size: cover
   font-family: 'Open Sans', sans-serif
 
@@ -23,14 +23,33 @@ body
   height: 10vh
   width: 100vw
   border: 1px solid red
-  padding: 1em
+  padding: 1.3em
 
-.take-note-group
-  display: flex
-  flex-flow: row wrap
-  border: 1px solid green
-  resize: both
-  cursor: pointer
+  .take-note-group
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-content: center
+    width: 30vw
+    border-radius: 0.3em
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2)
+    cursor: pointer
+    border: 1px solid green
 
-.take-note-buttons
-  margin-left: 0.4em
+    .input-text
+      width: 25vw
+      border: none
+      font-size: 1em
+      padding: 0.5em
+      border: 1px solid cyan
+
+    .take-note-buttons
+      justify-content: center
+      text-align: center
+      border: 1px solid magenta
+
+    .test
+      margin-left: 0.4em
+
+    input
+      font-size: 1.5em
