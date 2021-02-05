@@ -4,12 +4,7 @@
   "description": "A basic note-taking app.",
   "main": "gulpfile.js",
   "scripts": {
-    "html": "gulp doHtml",
-    "css": "gulp doCss",
-    "js": "gulp doJs",
-    "img": "gulp doImg",
-    "cbust": "gulp doCacheBust",
-    "clean": "gulp cleanProject",
+    "clean": "echo \"Cleaning the project...\" && gulp cleanProject",
     "build": "echo \"Cleaning and rebuilding the project...\" && gulp buildProject",
     "watch": "echo \"Starting local server...\" && gulp watchProject",
     "default": "echo \"Cleaning and rebooting the project...\" && gulp default"
@@ -42,9 +37,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2"
-  },
-  "dependencies": {
+    "gulp-uglify": "^3.0.2",
     "imagemin-gifsicle": "^7.0.0"
   }
 }

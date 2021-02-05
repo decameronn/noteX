@@ -4,20 +4,26 @@ body
   div(class="main-container")
 
     //- notes header, reserved for New Note element
-    div(class="take-note-container")
+      tn = take-note
+    div(class="tn-container")
       //- new note element
-      div(class="take-note-group")
+      div(class="tn-group")
         //- input text (later open new note div)
-        div(id="take-note-input")
+        div(id="tn-input")
           //- div(class="input-text")
             FIXME use textarea instead of input
           input(class="input-text" type="text", name="text", placeholder="Take new note...")
-          //- textarea(class="input-text" name="take-note", cols="5", rows="10")
+          //- textarea(class="input-text" name="tn", cols="5", rows="10")
         //- possible clickable icons at the end of the text input
-        div(class="take-note-buttons")
-          i(class="test far fa-copy")
-          i(class="test far fa-edit")
-          i(class="test far fa-times-circle")
+        div(class="tn-buttons")
+        ul
+          li(class="tn-button") 
+            i(class="far fa-copy")
+          li(class="tn-button") 
+            i(class="far fa-edit")
+          li(class="tn-button") 
+            i(class="far fa-times-circle")
 
     //- notes body, reserved for the List of Notes we create
       each note should be generated with JS on.click event
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laboriosam atque officiis illo nesciunt? Minus, consequatur eligendi expedita inventore debitis impedit commodi culpa voluptatibus nam, magni eaque cupiditate quidem ad.

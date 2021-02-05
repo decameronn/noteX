@@ -88,14 +88,7 @@ function watchProject(done) {
   done();
 }
 
-// debug
-exports.doHtml = doHtml;
-exports.doCss = doCss;
-exports.doJs = doJs;
-exports.doImg = doImg;
-exports.doCacheBust = doCacheBust;
 exports.cleanProject = cleanProject;
 exports.buildProject = buildProject;
 exports.watchProject = watchProject;
-
 exports.default = series(buildProject, watchProject);

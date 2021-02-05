@@ -9,53 +9,43 @@ body
 .main-container
   height: 100vh
 
-.take-note-container
+.tn-container
   display: flex
-  justify-content: space-around
+  justify-content: center
   align-items: center
   height: 10vh
   width: 100vw
-  // border: 1px solid red
+  border: 1px solid red
 
-  .take-note-group
+  .tn-group
     display: flex
     flex-flow: row wrap
     // justify-content: center
     height: 5vh
     width: 30vw
     border-radius: 0.5em
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2), 1px 1px 1px 1px rgba(0, 0, 0, .2)
-    cursor: pointer
-    // border: 1px solid green
+    // box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2), 2px 2px 2px 2px rgba(0, 0, 0, .2)
+    border: 1px solid green
 
-    .take-note-input
+    .tn-input
       display: flex
       align-items: center
-      border: 1px solid pink
 
     .input-text
-      // display: flex
-      // align-self: center
-      width: 23.88vw
+      width: auto
       border: 1px solid orange
       font-size: 1em
       padding: 0.5em
       border: 0
-      &:focus
-        border: 0
-        background: #fefefe
 
-    .take-note-buttons
+    .tn-buttons
       align-self: flex-end
-      // border: 1px solid magenta
+      border: 1px solid magenta
 
-    .test
+    .tn-button
+      cursor: pointer;
+      display: flex
       justify-content: flex-end
       margin-left: 0.4em
       width: 2em
       height: 2em
-
-.event-on-hover
-  background: #9a9a9a
-.event-on-click
-  background: magenta
