@@ -1,27 +1,19 @@
-console.log('main.js connected');
-
 let notes = [];
+const note = document.querySelector('.nl-note');
+const input = document.addEventListener('click', createNote());
 
-function createNote() {
 
+function renderNotes() {
+  note.innerHTML = notes.map(createNote).join('');
 }
 
-function editNote() {
+function createNote(note) {
+  const { title, text } = note;
 
-}
-
-function deleteNote() {
-
-}
-
-function testButtons() {
-  let test = document.querySelectorAll(".test");
-  test.addEventListener("hover", function () {
-    test.classList.add(".event-on-hover");
-    console.log("button hover")
-  });
-  test.addEventListener("click", function () {
-    test.classList.add(".event-on-click");
-    console.log("button click")
-  });
+  return `
+    <div class="note">
+      <div class="note-title">${title}</div>
+      <div class="note-text">${text}</div>
+    </div>
+  `;
 }

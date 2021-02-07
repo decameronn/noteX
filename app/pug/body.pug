@@ -5,18 +5,17 @@ body
 
     //- notes header, reserved for New Note element
     div(class="tn-container")
-
       ul(class="tn-group")
         li(id="tn-input")
-          input(class="input-text" type="text", name="text", placeholder="Take new note...")
+          input(id="input-text" type="text", name="text", placeholder="Take new note...")
         ul(class="tn-buttons")
-          li(class="tn-button") 
-            i(class="far fa-copy")
-          li(class="tn-button") 
+          li(class="tn-button" id="btn-edit") 
             i(class="far fa-edit")
-          li(class="tn-button") 
+          li(class="tn-button" id="btn-copy") 
+            i(class="far fa-copy")
+          li(class="tn-button" id="btn-close") 
             i(class="far fa-times-circle")
 
-    //- notes body, reserved for the List of Notes we create
-      each note should be generated with JS via on.click event
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laboriosam atque officiis illo nesciunt? Minus, consequatur eligendi expedita inventore debitis impedit commodi culpa voluptatibus nam, magni eaque cupiditate quidem ad.
+    //- notes body, reserved for the List of Notes
+    div(class="nl-container")
+      div(class="nl-note")
