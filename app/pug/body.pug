@@ -1,21 +1,33 @@
 body
   //- div(class="navbar-above-main-container")
+    reserved for search box, user, login, share, etc.
 
-  div(class="main-container")
+  //- div(class="main-container")
 
-    //- notes header, reserved for New Note element
-    div(class="tn-container")
-      ul(class="tn-group")
-        li(id="tn-input")
-          input(id="input-text" type="text", name="text", placeholder="Take new note...")
-        ul(class="tn-buttons")
-          li(class="tn-button" id="btn-edit") 
-            i(class="far fa-edit")
-          li(class="tn-button" id="btn-copy") 
-            i(class="far fa-copy")
-          li(class="tn-button" id="btn-close") 
-            i(class="far fa-times-circle")
+  //-   //- notes header, reserved for New Note element
+  //-   div(class="tn-container")
+  //-     ul(class="tn-group")
+  //-       li(class="tn-input")
+  //-         textarea(id="tn-textarea" placeholder="Take new note...") 
+  //-         //- input(id="input-text" type="text", name="text", placeholder="Take new note...")
+  //-       li(class="tn-input")
+  //-         ul(class="tn-buttons")
+  //-           li(class="tn-button" id="btn-edit") 
+  //-             i(class="far fa-edit")
+  //-           li(class="tn-button" id="btn-copy") 
+  //-             i(class="far fa-copy")
+  //-           li(class="tn-button" id="btn-close") 
+  //-             i(class="far fa-times-circle")
 
-    //- notes body, reserved for the List of Notes
-    div(class="nl-container")
-      div(class="nl-note")
+  //-   //- notes body, reserved for the List of Notes
+  //-   div(class="nl-container")
+  //-     div(class="nl-note")
+
+  div(id="notes-wrapper")
+    div(class="tc-notes")
+      div(class="tc-note")
+        div(class="tc-note-header")
+          i(class="tc-note-close far fa-times-circle")
+        div(class="tc-note-title") note title
+        div(class="tc-note-text") note text
+        
