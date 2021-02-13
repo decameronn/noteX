@@ -15,5 +15,17 @@ body
         option(value="byEdited") Sort by last edited
         option(value="byRecent") Sort by most recent
 
-    div(class="leftside-bar")
-      //- tags, calendar and everything else should go in here
+    div(class="notes-container")
+      div(class="note")
+        div(class="note-header") 
+          div(class="note-title") 
+            h3 Groceries list 
+          div(class="note-pin")
+            i(class="far fa-edit")
+        div(class="note-content") 
+          //- TODO insert image at cursor position via icon from footer
+          p Bread, raddish, salt, onion
+        div(class="note-footer")
+          i(class="far fa-file-image")
+          i(class="far fa-copy")
+          i(class="far fa-trash-alt")
