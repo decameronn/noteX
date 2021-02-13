@@ -89,6 +89,4 @@ function watchProject(done) {
 }
 
 exports.cleanProject = cleanProject;
-exports.buildProject = buildProject;
-exports.watchProject = watchProject;
-exports.default = series(buildProject, watchProject);
+exports.devBuild = series(buildProject, watchProject);
