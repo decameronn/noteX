@@ -21,13 +21,39 @@ body
   flex-flow: row wrap
   justify-content: center
   margin-top: 5em
-  border: 1px solid cyan
+  // border: 1px solid cyan
   
   .note
-    // border: 1px solid pink
-    border-radius: 0.2em
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-around
+    border-radius: 0.5em
     box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, .4)
     margin-left: 1.7em
     width: 15em
     height: 20em
-    padding: 1em
+    padding: 0 0.6em 
+    
+    .note-header
+      background-color: #f8f9fa
+      display: flex
+      flex-flow: row wrap
+      align-items: center
+      
+      .note-title
+        // border: 1px solid green
+        // line-height: .8
+      .note-pin
+        // justify-content: end
+      
+    .note-footer
+      display: flex
+      flex-flow: column nowrap
+      
+      .note-footer-text
+        & > p
+          font-size: 0.8em
+
+      .note-footer-pins
+        background-color: #f8f9fa
+        justify-content: space-around
