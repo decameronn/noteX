@@ -5,9 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "clean": "echo \"Cleaning the project...\" && gulp cleanProject",
-    "build": "echo \"Cleaning and rebuilding the project...\" && gulp buildProject",
-    "watch": "echo \"Starting local server...\" && gulp watchProject",
-    "default": "echo \"Cleaning and rebooting the project...\" && gulp default"
+    "dev": "echo \"Cleaning and rebooting the project...\" && gulp devBuild"
   },
   "repository": {
     "type": "git",
