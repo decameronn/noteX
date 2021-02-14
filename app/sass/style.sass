@@ -35,10 +35,11 @@ body
     padding: 0 0.6em 
     
     .note-header
-      background-color: #f8f9fa
+      // background-color: #f8f9fa
       display: flex
       flex-flow: row wrap
       align-items: center
+      justify-content: space-around
       
       .note-title
         // border: 1px solid green
@@ -49,11 +50,20 @@ body
     .note-footer
       display: flex
       flex-flow: column nowrap
-      
+            
       .note-footer-text
-        & > p
-          font-size: 0.8em
+        > p
+           font-size: 0.8em
 
       .note-footer-pins
-        background-color: #f8f9fa
+        display: flex
+        flex-flow: row nowrap
         justify-content: space-around
+        
+        .footer-icon
+          margin: 0
+          
+          &:hover
+            background-color: #f8f9fa
+            border-radius: 50%
+          
