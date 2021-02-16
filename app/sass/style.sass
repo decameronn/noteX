@@ -39,31 +39,45 @@ body
       display: flex
       flex-flow: row wrap
       align-items: center
-      justify-content: space-around
-      
+      // justify-content: space-around
+
       .note-title
-        // border: 1px solid green
-        // line-height: .8
+        border: 1px solid green
+        line-height: .8
+        padding: 0 1.2em
+        justify-content: flex-start
       .note-pin
-        // justify-content: end
+        // display: none
+        border: 1px solid red
+        padding: 1em 1em 0.8em 1em
+        justify-content: flex-end
+        &:hover
+          display: block
+          margin-left: .5em
+          transition: 0.3s all
+          background-color: #e5e5e5
+          border-radius: 50%
       
     .note-footer
       display: flex
       flex-flow: column nowrap
+      position: relative
             
       .note-footer-text
         > p
            font-size: 0.8em
+           text-align: center
 
       .note-footer-pins
+        border: 1px solid pink
         display: flex
         flex-flow: row nowrap
         justify-content: space-around
+        padding: 0.7em
         
         .footer-icon
+          border: 1px solid red
           margin: 0
-          
           &:hover
             background-color: #f8f9fa
-            border-radius: 50%
           
