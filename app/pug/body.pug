@@ -5,7 +5,7 @@ body
       h1 noteX
       h2 an elegant note-taking app
     
-    button(class="button" id="create-note") Create note 
+    button(class="button" id="create-note" onClick="insertNote()") Create note 
 
     div(class="menu")
       button(class="button" id="menu-button") Menu
@@ -16,7 +16,7 @@ body
         option(value="byRecent") Sort by most recent
 
     div(class="notes-container")
-      div(class="note")
+      div(class="note" id="note-id")
         div(class="note-header") 
           div(class="note-title") 
             h3 Groceries list 

@@ -1,10 +1,8 @@
 'use strict'
 
-const days = ['mon', 'tues', 'wed'];
+function insertNote() {
+  let notesContainer = document.querySelector(".notes-container");
+  let note = document.querySelectorAll(".note");
 
-function findItemInArray() {
-  let day = days.find(x => x === 'tues');
-  return day ? true : false;
+  // more to follow
 }
-
-// for (const i of days) { console.log(i); }
