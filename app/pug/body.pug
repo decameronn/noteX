@@ -9,7 +9,8 @@ body
 
     div(class="menu")
       button(class="button" id="menu-button") Menu
-      input(type="text" id="search-text" placeholder="Search notes")
+      //- input(type="date")
+      input(type="text" name="search" id="search-text" placeholder="Search notes")
       select(class="dropdown" id="sort-by") 
         option(value="byDate") Sort by creation date 
         option(value="byEdited") Sort by last edited
@@ -20,8 +21,8 @@ body
         div(class="note-header") 
           div(class="note-title") 
             h3 Groceries list 
-          div(class="note-pin")
-            i(class="fas fa-thumbtack fa-lg")
+          //- div(class="note-pin")
+          //-   i(class="fas fa-thumbtack fa-lg")
         div(class="note-content") 
           //- TODO insert image at cursor position via icon from footer
           p Bread, raddish, salt, onion, some more onion and some extra lorem ipsum
