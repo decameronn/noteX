@@ -1,8 +1,8 @@
-'use strict'
 
-function insertNote() {
-  let notesContainer = document.querySelector(".notes-container");
-  let note = document.querySelectorAll(".note");
 
-  // more to follow
+// create note element
+function createNewNote() {
+  const note 
 }
+
+// add note element to the page via click button
