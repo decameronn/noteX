@@ -6,7 +6,7 @@ body
       h2 an elegant note-taking app
     
     div(class="create-note")
-      button(id="create-note-button" onClick="insertNote()") Create note 
+      button(id="create-note-button" onclick="createNewNote()") Create note 
 
     div(class="menu")
       //- input(type="date")
@@ -16,7 +16,7 @@ body
         option(value="byEdited") Sort by last edited
         option(value="byRecent") Sort by most recent
 
-    div(class="notes-container")
+    div(id="notes-container")
     //-   div(class="note" id="note-id")
     //-     div(class="note-header") 
     //-       div(class="note-title") 
