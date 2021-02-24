@@ -1,12 +1,21 @@
 
-// let notesContainer = document.getElementById("notes-container");
+let notesContainer = document.getElementById("notes-container");
 
-// create note element
 function createNewNote() {
   let div = document.createElement("div");
   div.classList.add("note");
-  document.getElementById("notes-container").appendChild(div);
+  // document.getElementById("notes-container").appendChild(div);
+  notesContainer.appendChild(div);
 }
 
+// TODO:
+/**
+ * - addNote function
+ * - createNote function with note content
+ * - save new note in browser Storage 
+ * ...
+ * - connect dropbox account
+ * - sync notes
+ */
 
-// add note element to the page via click button
+ 
