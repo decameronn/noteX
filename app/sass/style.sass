@@ -7,90 +7,108 @@ body
   font-family: 'Open Sans', sans-serif
   margin: 0
 
+.navbar
+  display: flex
 
 .container
+  display: flex
+  flex-flow: row wrap
   width: 80vw
   padding: 0
-  height: 100vh
   margin: 0 auto
+  background-color: cyan
 
-  .header
-    margin-bottom: 2em
-    border: 1px solid red
+  .navbar-logo .nav-bar-left
+    justify-content: flex-start
+    background-color: yellow
 
-  .create-note
-    display: flex
-    justify-content: center
-    border: 1px solid red
+  .navbar-right
+    justify-content: flex-end
 
-  .menu
-    border: 1px solid red
-    display: flex
-    justify-content: center
-    margin: 0.7em 0 2em 0
+.notes-container
+  width: 80vw
+  margin: 0 auto
+  background-color: green
 
-  .notes-container
-    display: flex
-    flex-flow: row wrap
-    justify-content: center
-    margin-top: 5em
-    // border: 1px solid cyan
+  .notebook-list
+
+  // .header
+  //   margin-bottom: 2em
+  //   border: 1px solid red
+
+  // .create-note
+  //   display: flex
+  //   justify-content: center
+  //   border: 1px solid red
+
+  // .menu
+  //   border: 1px solid red
+  //   display: flex
+  //   justify-content: center
+  //   margin: 0.7em 0 2em 0
+
+  // .notes-container
+  //   display: flex
+  //   flex-flow: row wrap
+  //   justify-content: center
+  //   margin-top: 5em
+  //   // border: 1px solid cyan
     
-    .note
-      display: flex
-      flex-flow: column nowrap
-      justify-content: space-around
-      border-radius: 0.5em
-      box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, .4)
-      margin-left: 1.7em
-      width: 15em
-      height: 20em
-      padding: 0 0.6em 
+  //   .note
+  //     display: flex
+  //     flex-flow: column nowrap
+  //     justify-content: space-around
+  //     border-radius: 0.5em
+  //     box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, .4)
+  //     margin-left: 1.7em
+  //     width: 15em
+  //     height: 20em
+  //     padding: 0 0.6em 
       
-      .note-header
-        display: flex
-        flex-flow: row wrap
-        align-items: center
+  //     .note-header
+  //       display: flex
+  //       flex-flow: row wrap
+  //       align-items: center
         
-        .note-title
-          border: 1px solid green
-          line-height: .8
-          // font-size: 2em
-          width: 100em
+  //       .note-title
+  //         border: 1px solid green
+  //         line-height: .8
+  //         // font-size: 2em
+  //         width: 100em
 
-        .note-pin
-          // display: none
-          border: 1px solid red
-          padding: 1em 1em 0.8em 1em
-          justify-content: flex-end
-          &:hover
-            display: block
-            margin-left: .5em
-            transition: 0.3s all
-            background-color: #e5e5e5
-            border-radius: 50%
-      .note-body
-        background-color: #e5e5e5
+  //       .note-pin
+  //         // display: none
+  //         border: 1px solid red
+  //         padding: 1em 1em 0.8em 1em
+  //         justify-content: flex-end
+  //         &:hover
+  //           display: block
+  //           margin-left: .5em
+  //           transition: 0.3s all
+  //           background-color: #e5e5e5
+  //           border-radius: 50%
+  //     .note-body
+  //       background-color: #e5e5e5
         
-      .note-footer
-        display: flex
-        flex-flow: column nowrap
-        position: relative
+  //     .note-footer
+  //       display: flex
+  //       flex-flow: column nowrap
+  //       position: relative
               
-        .note-footer-text
-          > p
-            font-size: 0.8em
-            text-align: center
+  //       .note-footer-text
+  //         > p
+  //           font-size: 0.8em
+  //           text-align: center
 
-        .note-footer-pins
-          border: 1px solid pink
-          display: flex
-          flex-flow: row nowrap
-          justify-content: space-around
-          padding: 0.7em
+  //       .note-footer-pins
+  //         border: 1px solid pink
+  //         display: flex
+  //         flex-flow: row nowrap
+  //         justify-content: space-around
+  //         padding: 0.7em
           
-          .footer-icon
-            border: 1px solid red
-            margin: 0
-            &:hover
-              background-color: #f8f9fa
+  //         .footer-icon
+  //           border: 1px solid red
+  //           margin: 0
+  //           &:hover
+  //             background-color: #f8f9fa

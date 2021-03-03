@@ -3,18 +3,24 @@ body
   nav(class="navbar")
 
     div(class="container")
-      ul(id="navbar-start")
+      ul(id="navbar-logo")
         li(class="navbar-brand") noteX
-      ul("id="navbar-left")
-        li(class="nb-left-item") Home
-        li(class="nb-left-item") Home
-      ul("id="navbar-right")
-       li(class="nb-right-item") Sign Up
-       li(class="nb-right-item") Login
+      ul(id="navbar-left")
+        li(class="nav-left-item") Home
+        li(class="nav-left-item") About
+      ul(class="navbar-right")
+        li(class="nav-right-item") Sign Up
+        li(class="nav-right-item") Login
       
       div(id="under-container")
+        ul(class="navbar-right")
+          li(class="nav-right-item") Add notebook 
+          li(class="nav-right-item") And note
   
-  div(id="notes-container")
+  div(class="notes-container") some text
+    div(class="notebook-list")
+    div.notes-list 
+    div.note-content 
 
   //- header(class="header")
   //-   div(class="container")  
@@ -50,7 +56,3 @@ body
   //-           i(class="far fa-copy fa-lg")
   //-         div(class="footer-icon")
   //-           i(class="far fa-trash-alt fa-lg")
-
-          
-          
-          

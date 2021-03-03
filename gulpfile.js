@@ -1,5 +1,5 @@
 const { src, dest, parallel, series, watch } = require('gulp');
-const pug = require('gulp-pug');
+const pug = require('gulp-pug-3');
 const sourcemaps = require('gulp-sourcemaps');
 const broswerSync = require('browser-sync').create();
 const del = require('del');
