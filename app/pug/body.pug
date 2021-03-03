@@ -1,42 +1,56 @@
 body
-  div(class="container")
-    
-    header(class="header")
-      h1 noteX
-      h2 an elegant note-taking app
-    
-    div(class="create-note")
-      button(id="create-note-button" onclick="insertNewNote()") Create note 
+  
+  nav(class="navbar")
 
-    div(class="menu")
-      //- input(type="date")
-      input(type="text" name="search" id="search-text" placeholder="Search notes...")
-      select(class="dropdown" id="sort-by") 
-        option(value="byDate") Sort by creation date 
-        option(value="byEdited") Sort by last edited
-        option(value="byRecent") Sort by most recent
+    div(class="container")
+      ul(id="navbar-start")
+        li(class="navbar-brand") noteX
+      ul("id="navbar-left")
+        li(class="nb-left-item") Home
+        li(class="nb-left-item") Home
+      ul("id="navbar-right")
+       li(class="nb-right-item") Sign Up
+       li(class="nb-right-item") Login
+      
+      div(id="under-container")
+  
+  div(id="notes-container")
 
-    div(id="notes-container")
-    //-   div(class="note" id="note-id")
-    //-     div(class="note-header") 
-    //-       div(class="note-title") 
-    //-         h3 Groceries list 
-    //-       //- div(class="note-pin")
-    //-       //-   i(class="fas fa-thumbtack fa-lg")
-    //-     div(class="note-content") 
-    //-       //- TODO insert image at cursor position via icon from footer
-    //-       p Bread, raddish, salt, onion, some more onion and some extra lorem ipsum
-    //-     div(class="note-footer")
-    //-       div(class="note-footer-text")
-    //-         p Last edited: 5 minutes ago
-    //-       div(class="note-footer-pins")
-    //-         div(class="footer-icon")            
-    //-           i(class="far fa-file-image fa-lg")
-    //-         div(class="footer-icon")
-    //-           i(class="far fa-copy fa-lg")
-    //-         div(class="footer-icon")
-    //-           i(class="far fa-trash-alt fa-lg")
+  //- header(class="header")
+  //-   div(class="container")  
+  
+  //- div(class="create-note")
+  //-   button(id="create-note-button" onclick="insertNewNote()") Create note 
 
-            
-            
-            
+  //- div(class="menu")
+  //-   //- input(type="date")
+  //-   input(type="text" name="search" id="search-text" placeholder="Search notes...")
+  //-   select(class="dropdown" id="sort-by") 
+  //-     option(value="byDate") Sort by creation date 
+  //-     option(value="byEdited") Sort by last edited
+  //-     option(value="byRecent") Sort by most recent
+
+  //- div(id="notes-container")
+  //-   div(class="note" id="note-id")
+  //-     div(class="note-header") 
+  //-       div(class="note-title") 
+  //-         h3 Groceries list 
+  //-       //- div(class="note-pin")
+  //-       //-   i(class="fas fa-thumbtack fa-lg")
+  //-     div(class="note-content") 
+  //-       //- TODO insert image at cursor position via icon from footer
+  //-       p Bread, raddish, salt, onion, some more onion and some extra lorem ipsum
+  //-     div(class="note-footer")
+  //-       div(class="note-footer-text")
+  //-         p Last edited: 5 minutes ago
+  //-       div(class="note-footer-pins")
+  //-         div(class="footer-icon")            
+  //-           i(class="far fa-file-image fa-lg")
+  //-         div(class="footer-icon")
+  //-           i(class="far fa-copy fa-lg")
+  //-         div(class="footer-icon")
+  //-           i(class="far fa-trash-alt fa-lg")
+
+          
+          
+          
