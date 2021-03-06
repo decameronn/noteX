@@ -1,58 +1,22 @@
 body
   
-  nav(class="navbar")
-
-    div(class="container")
-      ul(id="navbar-logo")
-        li(class="navbar-brand") noteX
-      ul(id="navbar-left")
-        li(class="nav-left-item") Home
-        li(class="nav-left-item") About
-      ul(class="navbar-right")
-        li(class="nav-right-item") Sign Up
-        li(class="nav-right-item") Login
-      
-      div(id="under-container")
-        ul(class="navbar-right")
-          li(class="nav-right-item") Add notebook 
-          li(class="nav-right-item") And note
+  nav.navbar
+    div.container
+      div#upper-container
+        ul#navbar-left
+          li.nav-left-brand noteX
+          li.nav-left-item Home
+          li.nav-left-item About
+        ul#navbar-right
+          li.nav-right-item Sign Up
+          li.nav-right-item Login
+      div#lower-container
+        ul.navbar-right
+          li.nav-right-item Add notebook 
+          li.nav-right-item And note
   
-  div(class="notes-container") some text
-    div(class="notebook-list")
-    div.notes-list 
-    div.note-content 
-
-  //- header(class="header")
-  //-   div(class="container")  
-  
-  //- div(class="create-note")
-  //-   button(id="create-note-button" onclick="insertNewNote()") Create note 
-
-  //- div(class="menu")
-  //-   //- input(type="date")
-  //-   input(type="text" name="search" id="search-text" placeholder="Search notes...")
-  //-   select(class="dropdown" id="sort-by") 
-  //-     option(value="byDate") Sort by creation date 
-  //-     option(value="byEdited") Sort by last edited
-  //-     option(value="byRecent") Sort by most recent
-
-  //- div(id="notes-container")
-  //-   div(class="note" id="note-id")
-  //-     div(class="note-header") 
-  //-       div(class="note-title") 
-  //-         h3 Groceries list 
-  //-       //- div(class="note-pin")
-  //-       //-   i(class="fas fa-thumbtack fa-lg")
-  //-     div(class="note-content") 
-  //-       //- TODO insert image at cursor position via icon from footer
-  //-       p Bread, raddish, salt, onion, some more onion and some extra lorem ipsum
-  //-     div(class="note-footer")
-  //-       div(class="note-footer-text")
-  //-         p Last edited: 5 minutes ago
-  //-       div(class="note-footer-pins")
-  //-         div(class="footer-icon")            
-  //-           i(class="far fa-file-image fa-lg")
-  //-         div(class="footer-icon")
-  //-           i(class="far fa-copy fa-lg")
-  //-         div(class="footer-icon")
-  //-           i(class="far fa-trash-alt fa-lg")
+  div.notes-container notes-container
+    ul#notes-area
+      li.notebook-list the list of notebooks 
+      li.notes-list the list of notes in a notebook
+      li.note-content note content

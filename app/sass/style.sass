@@ -2,33 +2,56 @@
   box-sizing: border-box
 
 body
-  // background: url('../img/jan-kahanek-g3O5ZtRk2E4-unsplash.jpg') #a6bbf5
-  // background-size: cover
   font-family: 'Open Sans', sans-serif
   margin: 0
 
+ul
+  list-style: none  
+
 .navbar
   display: flex
+  .container
+    display: flex
+    flex-flow: column nowrap
+    width: 80vw
+    padding: 0
+    margin: 0 auto
+    background-color: cornsilk
 
-.container
-  display: flex
-  flex-flow: row wrap
-  width: 80vw
-  padding: 0
-  margin: 0 auto
-  background-color: cyan
-
-  .navbar-logo .nav-bar-left
-    justify-content: flex-start
-    background-color: yellow
-
-  .navbar-right
-    justify-content: flex-end
+    #upper-container
+      // display: flex
+      // flex-flow: row
+      background-color: bisque
+      #navbar-left
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        .nav-left-brand
+          min-width: 4vw
+        .nav-left-item
+          min-width: 4vw
+      #navbar-right
+        display: flex
+        justify-content: flex-end
+        .nav-right-item
+          min-width: 4vw
+    #lower-container
+      display: flex
+      flex-flow: row
+      justify-content: flex-end
 
 .notes-container
   width: 80vw
   margin: 0 auto
-  background-color: green
 
-  .notebook-list
-    background-color: peach
+  #notes-area
+    display: flex
+    flex-flow: row wrap
+    .notebook-list
+      background-color: lavender
+    .notes-list
+      background-color: lightgray
+    .note-content
+      background-color: lightgreen
+
+    
