@@ -1,0 +1,21 @@
+{
+  "name": "noteX - an elegant note-taking app",
+  "short_name": "noteX",
+  "start_url": ".",
+  "background_color": "#6dcdb1",
+  "theme_color": "#009578",
+
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/logo_192.png",
+      "sizes": "192x192",
+      "type": "img/png"
+    },
+    {
+      "src": "img/logo_512.png",
+      "sizes": "192x192",
+      "type": "img/png"
+    }
+  ]
+}
