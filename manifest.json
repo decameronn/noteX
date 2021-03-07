@@ -8,12 +8,12 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "img/logo_192.png",
+      "src": "img/chat192.svg",
       "sizes": "192x192",
       "type": "img/png"
     },
     {
-      "src": "img/logo_512.png",
+      "src": "img/chat512.svg",
       "sizes": "192x192",
       "type": "img/png"
     }
