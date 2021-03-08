@@ -14,9 +14,13 @@ body
       //-     li.nav-right-item Add notebook 
       //-     li.nav-right-item And note
   
-  div.notes-container
-    ul#notes-area
-      li.notebook-list
-        button(id="create-notebook" type="submit") Create notebook 
-      li.notes-list the list of notes in a notebook
-      li.note-content note content
+  main 
+    div.notes-container
+      ul#notes-area
+        li.notebook-list
+          //- This button must toggle CreateNotebook and Cancel commands
+          button(id="create-notebook" type="submit") Create notebook 
+        li.notes-list the list of notes in a notebook
+        li.note-content note content
+
+  footer 
