@@ -1,19 +1,24 @@
 body
-  div(class="container")
-    
-    header(class="header")
-      h1 noteX
-      h2 an elegant note-taking app
-    
-    div(class="create-note")
-      button(id="create-note-button" onclick="createNewNote()") Create note 
-
-    div(class="menu")
-      //- input(type="date")
-      input(type="text" name="search" id="search-text" placeholder="Search notes...")
-      select(class="dropdown" id="sort-by") 
-        option(value="byDate") Sort by creation date 
-        option(value="byEdited") Sort by last edited
-        option(value="byRecent") Sort by most recent
-
-    div(id="notes-container")
+  
+  nav.navbar
+    div.container
+      ul.navbar-left
+        li.nav-left-item: a(href="#") noteX
+        li.nav-left-item: a(href="#") Home
+        li.nav-left-item: a(href="#") About
+      ul.navbar-right
+        li.nav-right-item: a(href="#") Sign Up
+        li.nav-right-item: a(href="#") Login
+      //- div#lower-container
+      //-   ul.navbar-right
+      //-     li.nav-right-item Add notebook 
+      //-     li.nav-right-item And note
+  
+  main 
+    div.notes-container
+      ul#notes-area
+        li.notebook-list
+          //- This button must toggle CreateNotebook and Cancel commands
+          button(id="create-notebook" type="submit") Create notebook 
+        li.notes-list the list of notes in a notebook
+        li.note-content note content
