@@ -10,38 +10,46 @@ ul
 
 .navbar
   background-color: #f5f5f5
+  height: 7vh
+  margin-bottom: 0
   .container
     width: 80vw
-    padding: 0
+    padding: 1em
     margin: 0 auto
     background-color: cornsilk
-    #upper-container
+    .navbar-left
       display: flex
-      background-color: bisque
-      #navbar-left
-        flex-flow: row wrap
-        justify-content: flex-start
-        .nav-left-item
-          min-width: 4vw
-      .navbar-right
-        flex-direction: row
-        justify-content: flex-end
-        .nav-right-item
-          min-width: 4vw
-    #lower-container
+      flex-flow: row wrap
+      justify-content: flex-start
+      .nav-left-item
+        background-color: lavender
+        border: 1px solid red
+    .navbar-right
+      display: flex
+      flex-flow: row wrap
       justify-content: flex-end
+      .nav-right-item
+        border: 1px solid red
+        background-color: lavender
 
 .notes-container
   width: 80vw
+  height: 93vh
+  padding: 0
   margin: 0 auto
-
+  background: #fcfcfc
   #notes-area
     display: flex
     flex-flow: row wrap
+
     .notebook-list
       background-color: lavender
+      width: 15vw
+      #create-notebook
+        width: fit-content(100)
     .notes-list
       background-color: lightgray
+    
     .note-content
       background-color: lightgreen
 

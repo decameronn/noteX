@@ -2,21 +2,21 @@ body
   
   nav.navbar
     div.container
-      div#upper-container
-        ul.navbar-left
-          li.nav-left-item noteX
-          li.nav-left-item Home
-          li.nav-left-item About
-        ul.navbar-right
-          li.nav-right-item Sign Up
-          li.nav-right-item Login
+      ul.navbar-left
+        li.nav-left-item: a(href="#") noteX
+        li.nav-left-item: a(href="#") Home
+        li.nav-left-item: a(href="#") About
+      ul.navbar-right
+        li.nav-right-item: a(href="#") Sign Up
+        li.nav-right-item: a(href="#") Login
       //- div#lower-container
       //-   ul.navbar-right
       //-     li.nav-right-item Add notebook 
       //-     li.nav-right-item And note
   
-  div.notes-container notes-container
+  div.notes-container
     ul#notes-area
-      li.notebook-list the list of notebooks 
+      li.notebook-list
+        button(id="create-notebook" type="submit") Create notebook 
       li.notes-list the list of notes in a notebook
       li.note-content note content
