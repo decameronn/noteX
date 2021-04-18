@@ -1,5 +1,5 @@
 const { src, dest, parallel, series, watch } = require('gulp');
-const pug = require('gulp-pug-3');
+// const pug = require('gulp-pug-3');
 const sourcemaps = require('gulp-sourcemaps');
 const broswerSync = require('browser-sync').create();
 const del = require('del');
@@ -14,7 +14,7 @@ const cachebust = require('gulp-cache-bust');
 
 const paths = {
   app: {
-    pug: './app/pug/index.pug',
+    html: './app/html/*',
     sass: './app/sass/*',
     js: './app/js/*',
     img: './app/img/*',
@@ -30,9 +30,9 @@ const paths = {
 
 
 function doHtml() {
-  return src(paths.app.pug)
+  return src(paths.app.html)
     .pipe(plumber())
-    .pipe(pug())
+    // .pipe(pug())
     .pipe(dest(paths.dist.public))
     .pipe(broswerSync.stream());
 }
@@ -79,7 +79,7 @@ function watchProject(done) {
   broswerSync.init({ 
     server: { baseDir: './dist' }, port: 3000 });
 
-  watch('./app/pug/**/*.pug', doHtml);
+  watch('./app/html/**/*.html', doHtml);
   watch('./app/sass/**/*sass', doCss);
   watch('./app/js/**/*js', doJs);
   watch('./app/img/**/*', doImg);
