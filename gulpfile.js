@@ -33,7 +33,7 @@ const paths = {
 function doHtml() {
   return src(paths.app.html)
     .pipe(plumber())
-    // .pipe(pug())
+    // .pipe(concat('index.html'))
     .pipe(dest(paths.dist.public))
     .pipe(broswerSync.stream());
 }
@@ -76,7 +76,9 @@ function cleanProject() {
   return del(paths.dist.public);
 }
 
-const buildProject = series(cleanProject, doCacheBust, parallel(doHtml, doCss, doJs, doImg));
+const buildProject = series(
+  cleanProject, doCacheBust, 
+  parallel(doHtml, doCss, doJs, doImg));
 
 function watchProject(done) {
   broswerSync.init({ 
