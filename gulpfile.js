@@ -11,6 +11,7 @@ const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const cachebust = require('gulp-cache-bust');
+const concat = require('gulp-concat');
 
 const paths = {
   app: {
@@ -42,6 +43,7 @@ function doCss() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(concat('style.css'))
     .pipe(postcss([ autoprefixer() ]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.dist.css))
@@ -51,6 +53,7 @@ function doCss() {
 function doJs() {
   return src(paths.app.js)
     .pipe(plumber())
+    .pipe(concat('main.js'))
     .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
     .pipe(dest(paths.dist.js))
