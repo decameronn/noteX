@@ -16,7 +16,7 @@ const concat = require('gulp-concat');
 const paths = {
   app: {
     html: './app/html/*',
-    sass: './app/sass/*',
+    css: './app/css/*',
     js: './app/js/*',
     img: './app/img/*',
     fnt: './app/fnt/*'
@@ -39,7 +39,7 @@ function doHtml() {
 }
 
 function doCss() {
-  return src(paths.app.sass)
+  return src(paths.app.css)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -85,7 +85,7 @@ function watchProject(done) {
     server: { baseDir: './dist' }, port: 3000 });
 
   watch('./app/html/**/*.html', doHtml);
-  watch('./app/sass/**/*sass', doCss);
+  watch('./app/css/**/*css', doCss);
   watch('./app/js/**/*js', doJs);
   watch('./app/img/**/*', doImg);
     
