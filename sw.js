@@ -27,4 +27,15 @@ self.addEventListener("install", evt => {
 });
 
 // TODO (decameron) activate event
+self.addEventListener("activate", evt => {
+  evt.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(keys
+        .filter(key => key !== staticNoteXCache && key !== dynamicNoteXCache))
+        .map(key => caches.delete(key))
+    })
+  );
+});
+
+
 // TODO (decameron) fetch event
