@@ -39,3 +39,11 @@ self.addEventListener("activate", evt => {
 
 
 // TODO (decameron) fetch event
+self.addEventListener("fetch", evt => {
+  evt.respondWith(
+    caches.match(evt.request)
+      .then(cacheRes => {
+        return cacheRes || fetch(evt.request);
+      })
+  )
+});
